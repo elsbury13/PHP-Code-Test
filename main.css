@@ -1,0 +1,41 @@
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
+}
+.bg {
+  background-color: #bbb;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.border-white {
+  border-color: #FFF !important;
+  margin:auto;
+  width:40%;
+}
+.display-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+.display-container {
+  position: relative;
+}
+.animate-opacity {
+  animation: opac 0.8s;
+}
+.text-white {
+  color: #fff!important;
+}
+.jumbo {
+  font-size: 64px!important;
+}
+.animate-top {
+  position: relative;
+  animation: animatetop 0.4s;
+}

@@ -7,15 +7,17 @@ if (isset($_POST['code']) && $_POST['code'] != '') {
 
     $startTime = microtime(true);
 
-    echo "<br/>";
+    echo '<br/>';
     eval($code);
-    echo "<br/><br/>";
+    echo '<br/><br/>';
 
     $endTime = microtime(true);
 
-    echo $startTime."<br/>".$endTime;
     $timeDiff = $endTime - $startTime;
-    echo "Took ".round($timeDiff, 2)." seconds.";
+    $timeTaken = 'Took ' . round($timeDiff, 2) . ' seconds.  ';
+
+   $startTime = 0;
+   $endTime = 0;
 } elseif (isset($_SESSION['code']) && $_SESSION['code'] != '') {
     $code = $_SESSION['code'];
 }
@@ -23,7 +25,9 @@ if (isset($_POST['code']) && $_POST['code'] != '') {
 ?>
 <hr>
 <form action="" method="post">
-    <textarea cols="100" rows="30" id="code" name="code"><?php echo $code ?></textarea>
+    <textarea cols="100" rows="15" id="code" name="code"><?php echo $code ?></textarea>
     <br/><br/>
-    <input type="submit">
+    <input type="submit" />
 </form>
+<hr>
+<?= isset($timeTaken) ? $timeTaken : ''; ?>
